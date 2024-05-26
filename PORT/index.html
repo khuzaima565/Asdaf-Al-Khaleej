@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asdaf Al-Khaleej | Buying & Selling Used Furniture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="header">
+                <img src="https://qrcgcustomers.s3-eu-west-1.amazonaws.com/account35133984/46295301_1.png?0.27879668838813276"
+                    alt="Company Logo">
+                <h2>Asdaf Al-Khaleej</h2>
+                <p>Buying & Selling Used Furniture</p>
+            </div>
+            <div class="buttons">
+                <a href="tel:+9660581077291" class="btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Call</span>
+                </a>
+                <a href="mailto:aasdafalkhaleej@gmail.com" class="btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.google.com/maps?q=4475-4515+Riad,+Jubail+City+Center,+Al+Jubayl+35514,+Saudi+Arabia" target="_blank" class="btn">
+                    <i class="fas fa-directions"></i>
+                    <span>Direction</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+
+        <div class="material">
+            <h4>تقدم أصداف الخليج بيع وشراء الأثاث المستعمل بأسعار تنافسية مع خدمات النقل في الجبيل بالمملكة العربية
+                السعودية. وتذكر أنه مع أصداف الخليج يمكنك شراء أو بيع الأثاث بثقة، وتأكد من حصولك على أفضل الأسعار
+                والخدمة الاستثنائية. نحن في انتظار اتصالك</h4>
+
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-mobile-alt"></i> Phone: <a href="tel:+9660581077291">+9660581077291</a><br>
+                    <i class="fas fa-phone"></i> Telephone: <a href="tel:+9660598731297">+9660598731297</a><br>
+                    <i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:aasdafalkhaleej@gmail.com">aasdafalkhaleej@gmail.com</a><br>
+                    <i class="fas fa-map-marker-alt"></i> Address: 4475-4515 Riad, Jubail City Center, Al Jubayl 35514,
+                    Saudi Arabia
+
+                <div class="map-btn">
+                    <a href="https://www.google.com/maps?q=4475-4515+Riad,+Jubail+City+Center,+Al+Jubayl+35514,+Saudi+Arabia"
+                        target="_blank" class="btn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Show on Map</span>
+                    </a>
+                </div>
+                </p>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="vcard-btn">
+        <button class="btn" onclick="openModal()">
+            <i class="fas fa-address-card"></i> Download vCard
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>How would you like to save the contact data?</p>
+            <button onclick="saveByEmail()">Email</button>
+            <button onclick="saveToPhone()">Save to Phone</button>
+            <button class="cancel" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+    <div class="social-media">
+        <h4>Follow Us</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=61559881340668&mibextid=ZbWKwL" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B966581077291&text&type=phone_number&app_absent=0"
+                target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/furnitureshopjubail" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        function saveByEmail() {
+            // Create vCard data
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Asdaf Al-Khaleej
+ORG:Asdaf Al-Khaleej
+TEL:+9660581077291
+TEL:+9660598731297
+EMAIL:aasdafalkhaleej@gmail.com
+ADR:4475-4515 Riad, Jubail City Center, Al Jubayl 35514, Saudi Arabia
+END:VCARD`;
+
+            // Create a Blob object from the vCard data
+            const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+
+            // Create a download link
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', 'Asdaf_Al-Khaleej.vcf');
+            link.style.display = 'none';
+
+            // Append the link to the body and click it programmatically
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+
+            closeModal(); // Close modal after action
+        }
+
+        function saveToPhone() {
+            alert("This feature is not supported in this demo. In a real scenario, you would provide a vCard file for users to download and import into their phone's contacts.");
+            closeModal(); // Close modal after action
+        }
+    </script>
+
+</body>
+
+</html>

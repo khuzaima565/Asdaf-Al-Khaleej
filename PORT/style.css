@@ -1,0 +1,693 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #82848f;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'Maison Neue', sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    /* Change to column to stack elements vertically */
+    align-items: center;
+}
+
+.container {
+    background: linear-gradient(45deg, #bd0a0a 0%, #5e0808 100%);
+    
+ width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    background: linear-gradient(45deg, rgb(189, 10, 10) 0%, rgb(189, 10, 10) 1%, rgb(94, 8, 8) 100%);
+    /* Light red background */
+    padding: 20px;
+    width: 80%;
+    max-width: 640px;
+    height: 300px;
+    /* Fixed height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+.header h2 {
+    margin: 10px 0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 0;
+    color: #e9d9d9;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #bd0a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    /* Fixed width for all buttons */
+    height: 60px;
+    /* Fixed height for all buttons */
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.btn i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.btn span {
+    display: block;
+}
+
+.btn:hover {
+    background-color: #a30808;
+}
+
+.second {
+    width: 100%;
+    max-width: 647px;
+    padding: 76px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    background: #fff;
+    color: #333;
+    text-align: left;
+}
+
+.second h4 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 29px;
+    font-family: 'Lateef', sans-serif;
+    text-align: center;
+    /* Center the text in the header */
+}
+
+.second p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.second p i {
+    margin-right: 10px;
+    color: #bd0a0a;
+}
+
+.second p a {
+    color: #bd0a0a;
+    text-decoration: none;
+}
+
+.second p a:hover {
+    text-decoration: underline;
+}
+
+.material {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.material h4 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.material h4::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #bd0a0a;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.material p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.material p i {
+    margin-right: 10px;
+    color: #bd0a0a;
+}
+
+.material p a {
+    color: #bd0a0a;
+    text-decoration: none;
+}
+
+.material p a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: #bd0a0a;
+}
+
+.contact-info p a {
+    color: #bd0a0a;
+    text-decoration: none;
+}
+
+.contact-info p a:hover {
+    text-decoration: underline;
+}
+
+.material .map-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-btn .btn {
+    background-color: transparent;
+    color: #bd0a0a;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.map-btn .btn i {
+    margin-right: 5px;
+}
+
+.map-btn .btn:hover {
+    background-color: #bd0a0a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-btn .btn:hover span {
+    display: inline;
+}
+
+.social-media {
+    width: 92%;
+    max-width: 758px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media h4 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.social-media h4::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #bd0a0a;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.social-media .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media .icons a {
+    color: #bd0a0a;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-media .icons a:hover {
+    color: #5e0808;
+    transform: scale(1.2);
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* Adjust the height as needed */
+}
+
+/* Button styles */
+.vcard-btn {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vcard-btn .btn {
+    background-color: #bd0a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.vcard-btn .btn i {
+    margin-right: 10px;
+}
+
+.vcard-btn .btn:hover {
+    background-color: #a30808;
+}
+
+.vcard-options {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.vcard-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #bd0a0a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vcard-options a:hover {
+    background-color: #a30808;
+}
+
+.vcard-options a i {
+    margin-right: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.modal-content button {
+    background-color: #bd0a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #a30808;
+}
+
+.modal-content button.cancel {
+    background-color: #82848f;
+}
+
+.modal-content button.cancel:hover {
+    background-color: #6b6e77;
+}
+
+
+
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+
+     .container {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .content-wrapper {
+        height: auto;
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons .btn {
+        width: 100%;
+    }
+
+    .second {
+        padding: 20px;
+    }
+
+    .material h4::after {
+        width: 30px;
+    }
+
+    .social-media h4::after {
+        width: 30px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+
+    .container {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .header img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .second {
+        padding: 10px;
+    }
+
+    .material h4 {
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-media h4 {
+        font-size: 14px;
+    }
+}
+
+/* Button hover effect */
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a30808;
+}
+
+/* Social media icons hover effect */
+.social-media .icons a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media .icons a:hover {
+    color: #5e0808;
+    transform: scale(1.2);
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        height: auto;
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* .material{
+        width: 100%;
+    } */
+
+    .buttons .btn {
+        width: 90%;
+        height: auto;
+    }
+
+    .btn i {
+        font-size: 20px;
+    }
+
+    .second {
+        padding: 0px;
+    }
+
+    .material h4::after {
+        width: 85%;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-media .icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-media .icons a {
+        font-size: 24px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  
+    .container {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .header img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .second {
+        padding: 10px;
+    }
+
+    .material h4 {
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 12px;
+    }
+
+    .social-media h4 {
+        font-size: 14px;
+    }
+}
+/* For screens smaller than 576px (Extra Small Devices) */
+@media screen and (max-width: 575.98px) {
+    .container {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .content-wrapper {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .header img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn i {
+        font-size: 20px;
+    }
+
+    .second {
+        padding: 0px;
+    }
+    .material {
+
+        width: 85%;
+    }
+    .material h4::after {
+        width: 40px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-media .icons a {
+        font-size: 22px;
+    }
+}
+
+/* For screens between 576px and 767.98px (Small Devices) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    /* Adjustments for small devices can go here */
+}
+
+/* For screens between 768px and 991.98px (Medium Devices) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* Adjustments for medium devices can go here */
+}
+
+/* For screens between 992px and 1199.98px (Large Devices) */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    /* Adjustments for large devices can go here */
+}
+
+/* For screens 1200px and larger (Extra Large Devices) */
+@media screen and (min-width: 1200px) {
+    /* Adjustments for extra large devices can go here */
+}
